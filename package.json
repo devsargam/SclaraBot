@@ -4,7 +4,7 @@
   "description": "a simple discord bot to do some automation in my server.",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js"
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
