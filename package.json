@@ -4,7 +4,8 @@
   "description": "a simple discord bot to do some automation in my server.",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "sync": "node commands.js"
   },
   "repository": {
     "type": "git",
