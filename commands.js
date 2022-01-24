@@ -16,21 +16,17 @@ const cmds = [];
 const cmd_folders = fs.readdirSync('./commands');
 
 for (const f of cmd_folders) {
-
     const cmd_files = fs.readdirSync(`./commands/${f}`).filter(file => file.endsWith('.js'));
 
     for (const file of cmd_files) {
         const cmd = require(`./commands/${f}/${file}`);
         cmds.push(cmd.data.toJSON());
     }
-
 }
 
 const rest = new REST({ version: '9' }).setToken(token);
 (async () => {
-
     try {
-
         await rest.put(
             Routes.applicationGuildCommands(client_id, guild_id),
             /*
@@ -41,12 +37,8 @@ const rest = new REST({ version: '9' }).setToken(token);
             */
             { body: cmds },
         );
-
         console.log('Slash commands successfully deployed !');
-
     } catch (e) {
-
         console.error(e);
     }
-
 })();
