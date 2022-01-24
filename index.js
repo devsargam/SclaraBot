@@ -31,5 +31,5 @@ client.on('interactionCreate', async interaction => {
     }
 });
 
-
+console.clear();
 client.login(token);
